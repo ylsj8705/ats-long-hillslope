@@ -170,7 +170,7 @@
             <Parameter name="regions" type="Array(string)" value="{surface}" />
             <ParameterList name="boundary pressure" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="101025.0" />
+                <Parameter name="value" type="double" value="99025.0" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
@@ -186,7 +186,7 @@
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-linear" type="ParameterList">
                 <Parameter name="x0" type="Array(double)" value="{0.0,0.0,0.0,7.0}" />
-                <Parameter name="y0" type="double" value="101025.0" />
+                <Parameter name="y0" type="double" value="99025.0" />
                 <Parameter name="gradient" type="Array(double)" value="{0.0,0.0,0.0,-9806.65}" />
               </ParameterList>
             </ParameterList>
@@ -208,7 +208,7 @@
           <ParameterList name="peat" type="ParameterList">
             <Parameter name="region" type="string" value="peat" />
             <Parameter name="WRM Type" type="string" value="van Genuchten" />
-            <Parameter name="van Genuchten alpha" type="double" value="0.06" />
+            <Parameter name="van Genuchten alpha" type="double" value="0.00006" />
             <Parameter name="van Genuchten m" type="double" value="0.22" />
             <Parameter name="residual saturation" type="double" value="0.0" />
             <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
@@ -216,7 +216,7 @@
           <ParameterList name="top mineral" type="ParameterList">
             <Parameter name="region" type="string" value="top mineral" />
             <Parameter name="WRM Type" type="string" value="van Genuchten" />
-            <Parameter name="van Genuchten alpha" type="double" value="0.003" />
+            <Parameter name="van Genuchten alpha" type="double" value="0.000003" />
             <Parameter name="van Genuchten m" type="double" value="0.24" />
             <Parameter name="residual saturation" type="double" value="0.05" />
             <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
@@ -224,7 +224,7 @@
           <ParameterList name="bottom mineral" type="ParameterList">
             <Parameter name="region" type="string" value="bottom mineral" />
             <Parameter name="WRM Type" type="string" value="van Genuchten" />
-            <Parameter name="van Genuchten alpha" type="double" value="0.003" />
+            <Parameter name="van Genuchten alpha" type="double" value="0.000003" />
             <Parameter name="van Genuchten m" type="double" value="0.24" />
             <Parameter name="residual saturation" type="double" value="0.05" />
             <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />

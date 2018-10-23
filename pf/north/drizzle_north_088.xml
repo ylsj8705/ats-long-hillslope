@@ -24,9 +24,6 @@
     </ParameterList>
   </ParameterList>
 
-  <ParameterList name="Domain" type="ParameterList">
-    <Parameter name="Spatial Dimension" type="int" value="3" />
-  </ParameterList>
   <ParameterList name="regions" type="ParameterList">
     <ParameterList name="computational domain" type="ParameterList">
       <ParameterList name="region: box" type="ParameterList">
@@ -352,9 +349,20 @@
       </ParameterList>
 
       <ParameterList name="initial condition" type="ParameterList">
-        <Parameter name="restart file" type="string" value="../checkpointpf.h5" />
+        <ParameterList name="function" type="ParameterList">
+          <ParameterList name="initial precip" type="ParameterList">
+            <Parameter name="region" type="string" value="surface domain" />
+            <Parameter name="components" type="Array(string)" value="{cell}" />
+            <ParameterList name="function" type="ParameterList">
+              <ParameterList name="function-tabular" type="ParameterList">
+                <Parameter name="file" type="string" value="../drizzle_north_daily.h5" />
+                <Parameter name="x header" type="string" value="time" />
+                <Parameter name="y header" type="string" value="Ps" />
+              </ParameterList>
+            </ParameterList>
+          </ParameterList>
+        </ParameterList>
       </ParameterList>
-
     </ParameterList>
 
     <ParameterList name="coupled SEB and permafrost" type="ParameterList">
@@ -713,8 +721,19 @@
       <Parameter name="source key" type="string" value="snow-source_sink" />
       <Parameter name="source term is differentiable" type="bool" value="false" />
       <ParameterList name="initial condition" type="ParameterList">
-        <Parameter name="restart file" type="string" value="../checkpointpf.h5" />
+	<ParameterList name="function" type="ParameterList">
+	  <ParameterList name="initial head" type="ParameterList">
+	    <Parameter name="region" type="string" value="surface domain" />
+            <Parameter name="component" type="string" value="cell" />
+            <ParameterList name="function" type="ParameterList">
+              <ParameterList name="function-constant" type="ParameterList">
+                <Parameter name="value" type="double" value="0.2" />
+              </ParameterList>
+            </ParameterList>
+          </ParameterList>
+        </ParameterList>
       </ParameterList>
+
 
       <ParameterList name="verbose object" type="ParameterList">
         <Parameter name="verbosity level" type="string" value="none" />
