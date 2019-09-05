@@ -1,0 +1,14 @@
+# Ignore output dir
+out/
+
+# Ignore run dirs
+run*/
+
+# Ignore slurm output
+*slurm
+
+# Ignore sh scripts.
+*.sh
+
+# Ignore mylog
+mylog*
